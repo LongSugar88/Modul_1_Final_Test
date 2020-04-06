@@ -19,7 +19,9 @@
         }
     }
 
-    function checkFibionashi(int) {
+    function isFibionasi(int) {
+        buildFibionashiArray(int);
+        console.log('Kiem tra so '+ int + ' co thuoc day Fibionashi sau hay khong: ' + fibionasi);
         for(let i=fibionasi.length-1; i>0; i--){
             if( int === fibionasi[i]){
                 return console.log(true);
@@ -29,14 +31,7 @@
         }
     }
 
-    function isFibionasi(int) {
-        buildFibionashiArray(int);
-        console.log('Kiem tra so '+ int + ' co thuoc day Fibionashi sau hay khong: ' + fibionasi);
-        checkFibionashi(int);
-    }
-
-
-    isFibionasi(13);
+    isFibionasi(21);
 </script>
 </body>
 </html>
