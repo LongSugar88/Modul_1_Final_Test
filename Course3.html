@@ -6,7 +6,31 @@
 </head>
 <body>
 <script>
+function isFibionasi(int) {
+    let a = 0;
+    let b = 1;
+    let num = 0;
+    let fibionasi = [];
+    while (num < int) {
+        num = a+b;
+        a = b;
+        b = num;
+        fibionasi.push(num);
+    }
+    console.log(fibionasi);
+    for(let i=fibionasi.length-1; i>0; i--){
+        if( int == fibionasi[i]){
+            return console.log(true);
+        } else {
+            return console.log(false);
+        }
+    }
 
+}
+isFibionasi(18);
+isFibionasi(13);
+isFibionasi(50);
+isFibionasi(100);
 </script>
 </body>
 </html>
