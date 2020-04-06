@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr,num) {
+        let newArr = [];
+        for(i=0, j=0; i<arr.length; i++){
+            if(arr[i] !== num){
+                newArr[j] = arr[i];
+                j++
+            }
+        }
+        console.log(newArr);
+    }
+    arrForCheck = ['l','o','n','g','d','e','p','t','r','a','i','v','o','d','o','i'];
+    tryRemoveFromArray(arrForCheck, 'i')
+</script>
+</body>
+</html>
