@@ -9,16 +9,21 @@
     function tryRemoveFromArray(arr,num) {
         //Khong muon dung ham .splice(i,num) nen dung thu cong.
         let newArr = [];
-        for(let i=0, j=0; i<arr.length; i++){
+        let j=0;
+        for(let i=0; i<arr.length; i++){
             if(arr[i] !== num){
                 newArr[j] = arr[i];
                 j++
             }
         }
+        if(j == 0){
+            console.log(arr);
+        };
         console.log(newArr);
     }
     arrForCheck = ['l','o','n','g','d','e','p','t','r','a','i','v','o','d','o','i'];
     tryRemoveFromArray(arrForCheck, 'i')
+    tryRemoveFromArray(arrForCheck, 'w')
 </script>
 </body>
 </html>

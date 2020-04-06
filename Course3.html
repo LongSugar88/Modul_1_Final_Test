@@ -6,32 +6,35 @@
 </head>
 <body>
 <script>
-    let fibionasi = [];
-    function buildFibionashiArray(int) {
+    let fibionasi = [0];
+    function isFibionasi(int) {
+        let final = fibionasi.length;
         let a = 0;
         let b = 1;
         let num = 0;
-        while (num < int) {
+        while (num <= int) {
             num = a+b;
+            if( int == num || int == 0) {
+                return console.log(true);
+            }
             a = b;
             b = num;
             fibionasi.push(num);
         }
+        return console.log(false);
     }
 
-    function isFibionasi(int) {
-        buildFibionashiArray(int);
-        console.log('Kiem tra so '+ int + ' co thuoc day Fibionashi sau hay khong: ' + fibionasi);
-        for(let i=fibionasi.length-1; i>0; i--){
-            if( int === fibionasi[i]){
-                return console.log(true);
-            } else {
-                return console.log(false);
-            }
-        }
-    }
-
-    isFibionasi(21);
+    // isFibionasi(0);
+    // isFibionasi(1);
+    // isFibionasi(2);
+    // isFibionasi(3);
+    isFibionasi(4);
+    // isFibionasi(5);
+    isFibionasi(6);
+    isFibionasi(7);
+    // isFibionasi(8);
+    isFibionasi(9);
+    isFibionasi(10);
 </script>
 </body>
 </html>
